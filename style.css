@@ -1,47 +1,208 @@
-body{
+/* ==========================
+   LES REST'EN POCHE BILLARD
+   Style principal
+========================== */
+
+*{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#111;
-    color:white;
-    text-align:center;
+    padding:0;
+    box-sizing:border-box;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#111;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
 
 header{
-    background:#000;
-    padding:25px;
-    border-bottom:4px solid #c9a227;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(8px);
+    z-index:1000;
 }
 
-h1{
-    color:#c9a227;
-    margin:0;
+.logo img{
+    height:80px;
 }
 
-nav{
-    background:#1b1b1b;
-    padding:15px;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
-    font-weight:bold;
+    font-weight:600;
+    transition:.3s;
 }
 
 nav a:hover{
-    color:#c9a227;
+    color:#d4af37;
 }
 
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
-}
+/* ==========================
+   PAGE D'ACCUEIL
+========================== */
 
-footer{
-    background:#000;
+.hero{
+    height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.70)),
+        url("images/fond.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
     padding:20px;
-    color:#999;
-    margin-top:40px;
 }
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:3.4rem;
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    margin-bottom:35px;
+}
+/* ==========================
+   BOUTONS
+========================== */
+
+.bouton{
+    display:inline-block;
+    margin:10px;
+    padding:14px 28px;
+    background:#d4af37;
+    color:#111;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.bouton:hover{
+    background:#ffffff;
+    transform:translateY(-2px);
+}
+
+.bouton-secondaire{
+    background:transparent;
+    color:#ffffff;
+    border:2px solid #d4af37;
+}
+
+.bouton-secondaire:hover{
+    background:#d4af37;
+    color:#111;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+.section{
+    max-width:1100px;
+    margin:0 auto;
+    padding:80px 20px;
+}
+
+.section h2{
+    text-align:center;
+    color:#d4af37;
+    font-size:2.2rem;
+    margin-bottom:35px;
+}
+
+/* ==========================
+   DERNIER MATCH
+========================== */
+
+.match-card{
+    background:#1b1b1b;
+    border-left:5px solid #d4af37;
+    border-radius:12px;
+    padding:25px;
+    max-width:700px;
+    margin:0 auto;
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
+}
+
+.match-card h3{
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.score{
+    font-size:1.5rem;
+    font-weight:700;
+    text-align:center;
+    margin:20px 0;
+}
+
+.match-card hr{
+    border:none;
+    border-top:1px solid #444;
+    margin:25px 0;
+}
+
+/* ==========================
+   ACTUALITÉS
+========================== */
+
+.actu{
+    background:#1b1b1b;
+    border-radius:12px;
+    padding:25px;
+    margin:20px auto;
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
+}
+
+.actu h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+/* ==========================
+   AGENDA
+========================== */
+
+.agenda{
+    list-style:none;
+    max-width:500px;
+    margin:auto;
+}
+
+.agenda li{
+    background:#1b1b1b;
+    margin:12px 0;
+    padding:15px;
+    border-left:5px solid #d4af37;
+    border-radius:8px;
+    }
