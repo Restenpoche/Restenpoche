@@ -1,262 +1,191 @@
-/* ==========================
-   LES REST'EN POCHE BILLARD
-   Style principal
-========================== */
-
+/* ===== Style général ===== */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Poppins',sans-serif;
-    background:#111;
-    color:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#333;
     line-height:1.6;
 }
 
-/* ==========================
-   HEADER
-========================== */
+img{
+    max-width:100%;
+}
+
+/* ===== En-tête ===== */
 
 header{
-    position:fixed;
+    background:#222;
+    color:#fff;
+    padding:15px 20px;
+    position:sticky;
     top:0;
-    left:0;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    background:rgba(0,0,0,0.75);
-    backdrop-filter:blur(8px);
     z-index:1000;
 }
 
-.logo img{
-    height:80px;
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
+
+.logo{
+    height:70px;
+}
+
+/* ===== Menu ===== */
 
 nav ul{
     display:flex;
     list-style:none;
-    gap:25px;
+    gap:20px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    font-weight:600;
+    font-weight:bold;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#d4af37;
+    color:#FFD700;
 }
 
-/* ==========================
-   PAGE D'ACCUEIL
-========================== */
+/* ===== Bouton menu mobile ===== */
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* ===== Bannière ===== */
 
 .hero{
-    height:100vh;
-    background:
-        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.70)),
-        url("images/fond.jpg");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background:url("images/billard.jpg") center/cover;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* ===== Sections ===== */
+
+section{
+    padding:60px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#006400;
+}
+
+/* ===== Cartes ===== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* ===== Galerie ===== */
+
+.galerie{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.galerie img{
+    border-radius:10px;
+}
+
+/* ===== Contact ===== */
+
+.contact{
+    background:#222;
+    color:white;
+    text-align:center;
+}
+
+/* ===== Pied de page ===== */
+
+footer{
+    background:#111;
+    color:white;
     text-align:center;
     padding:20px;
 }
 
-.hero-content{
-    max-width:800px;
+/* ===== Responsive ===== */
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+display:none;
+width:100%;
+}
+
+nav.active{
+display:block;
+}
+
+nav ul{
+flex-direction:column;
+background:#222;
+padding:20px 0;
+text-align:center;
+}
+
+nav ul li{
+padding:10px 0;
 }
 
 .hero h1{
-    font-size:3.4rem;
-    color:#d4af37;
-    margin-bottom:20px;
+font-size:30px;
 }
 
 .hero p{
-    font-size:1.3rem;
-    margin-bottom:35px;
-}
-   .hero h2{
-    font-size:2rem;
-    font-weight:400;
-    color:#ffffff;
-    margin-bottom:20px;
-    font-style:italic;
-   }
-/* ==========================
-   BOUTONS
-========================== */
-
-.bouton{
-    display:inline-block;
-    margin:10px;
-    padding:14px 28px;
-    background:#d4af37;
-    color:#111;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:600;
-    transition:0.3s;
+font-size:18px;
 }
 
-.bouton:hover{
-    background:#ffffff;
-    transform:translateY(-2px);
+.header-container{
+flex-wrap:wrap;
 }
 
-.bouton-secondaire{
-    background:transparent;
-    color:#ffffff;
-    border:2px solid #d4af37;
-}
-
-.bouton-secondaire:hover{
-    background:#d4af37;
-    color:#111;
-}
-
-/* ==========================
-   SECTIONS
-========================== */
-
-.section{
-    max-width:1100px;
-    margin:0 auto;
-    padding:80px 20px;
-}
-
-.section h2{
-    text-align:center;
-    color:#d4af37;
-    font-size:2.2rem;
-    margin-bottom:35px;
-}
-
-/* ==========================
-   DERNIER MATCH
-========================== */
-
-.match-card{
-    background:#1b1b1b;
-    border:2px solid #d4af37;
-    border-radius:15px;
-    padding:30px;
-    max-width:750px;
-    margin:30px auto;
-    box-shadow:0 10px 30px rgba(0,0,0,.45);
-}
-
-.match-card h3{
-    color:#d4af37;
-    margin-bottom:15px;
-}
-
-.score{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:1.4rem;
-    font-weight:700;
-    margin:25px 0;
-}
-
-.score strong{
-    font-size:2rem;
-    color:#d4af37;
-}
-
-.match-card hr{
-    border:none;
-    border-top:1px solid #444;
-    margin:25px 0;
-}
-
-/* ==========================
-   ACTUALITÉS
-========================== */
-
-.actu{
-    background:#1b1b1b;
-    border-radius:12px;
-    padding:25px;
-    margin:20px auto;
-    box-shadow:0 5px 20px rgba(0,0,0,.35);
-}
-
-.actu h3{
-    color:#d4af37;
-    margin-bottom:10px;
-}
-
-/* ==========================
-   AGENDA
-========================== */
-
-.agenda{
-    list-style:none;
-    max-width:500px;
-    margin:auto;
-}
-
-.agenda li{
-    background:#1b1b1b;
-    margin:12px 0;
-    padding:15px;
-    border-left:5px solid #d4af37;
-    border-radius:8px;
-    }
-
-/* ==========================
-   MENU MOBILE
-========================== */
-
-.menu-toggle{
-    display:none;
-    background:#d4af37;
-    color:#111;
-    border:none;
-    padding:10px 18px;
-    border-radius:8px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-@media (max-width:768px){
-
-    .menu-toggle{
-        display:block;
-        margin:10px auto;
-    }
-
-    nav{
-        display:none;
-        width:100%;
-    }
-
-    nav.active{
-        display:block;
-    }
-
-    .menu{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
-        padding:20px 0;
-    }
 }
