@@ -16,71 +16,66 @@
 
 <header>
 
-<div class="logo">
-    <img src="images/logo.png" alt="Les Rest'en Poche Billard">
-</div>
+    <div class="logo">
+        <img src="images/logo.png" alt="Les Rest'en Poche Billard">
+    </div>
 
-<button class="menu-toggle">☰ Menu</button>
+    <button class="menu-toggle">☰ Menu</button>
 
-<nav>
-
-<ul class="menu">
-
-<li><a href="#accueil">Accueil</a></li>
-
-<li><a href="#apropos">À propos</a></li>
-
-<li><a href="#championnat">Championnat</a></li>
-
-<li><a href="#actualites">Actualités</a></li>
-
-<li><a href="#agenda">Agenda</a></li>
-
-<li><a href="#galerie">Galerie</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<script src="script.js"></script>
+    <nav id="menu">
+        <ul class="menu">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#championnat">Championnat</a></li>
+            <li><a href="#actualites">Actualités</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
 </header>
 
 <section id="accueil" class="hero">
 
-<div class="hero-content">
+    <h1>Les Rest'en Poche Billard</h1>
 
-<h1>Les Rest'en Poche Billard</h1>
+    <h2>La passion du billard,<br>le plaisir du partage.</h2>
 
-<p>
-La passion du billard, le plaisir du partage.
-</p>
+    <p>
+        Association loi 1901 dédiée à la pratique du billard à Bellevigny (Vendée).
+    </p>
 
-<a href="#contact" class="bouton">
-Nous contacter
-</a>
+    <div class="contact-boutons">
 
-<a href="#championnat" class="bouton bouton-secondaire">
-Championnat & Classement
-</a>
+        <a class="bouton"
+           href="http://compet.afebas.org/equipe#pane-calendrier-resultats"
+           target="_blank">
+            🏆 Championnat & Classement
+        </a>
 
-</div>
+        <a class="bouton bouton-secondaire" href="#contact">
+            📞 Nous contacter
+        </a>
+
+    </div>
 
 </section>
+
 <section id="dernier-match" class="section">
 
     <h2>🎱 Dernier résultat</h2>
 
     <div class="match-card">
 
-        <h3>Championnat Départemental D2</h3>
+        <p class="competition">
+            Championnat Départemental 2 - Vendée
+        </p>
 
-        <p class="score">
-<span>Les Rest'en Poche Billard</span>
-<strong>5 - 2</strong>
-<span>Adversaire</span>
+                <p class="score">
+            <span>Les Rest'en Poche Billard</span>
+            <strong>5 - 2</strong>
+            <span>ABC Billard</span>
         </p>
 
         <p>📅 Samedi 19 septembre 2026</p>
@@ -90,7 +85,7 @@ Championnat & Classement
         <h3>📅 Prochaine rencontre</h3>
 
         <p>
-            Les Rest'en Poche Billard 🆚 Adversaire
+            Les Rest'en Poche Billard 🆚 XYZ Billard
         </p>
 
         <p>Samedi 26 septembre 2026 à 14h00</p>
@@ -104,10 +99,9 @@ Championnat & Classement
     <h2>À propos</h2>
 
     <p>
-        L'association <strong>Les Rest'en Poche Billard</strong>,
-        située à Bellevigny, a pour objectif de promouvoir la pratique
-        du billard dans un esprit de convivialité, de respect
-        et de fair-play.
+        Les Rest'en Poche Billard est une association de Bellevigny
+        réunissant des passionnés de billard dans une ambiance conviviale,
+        sportive et ouverte à tous.
     </p>
 
 </section>
@@ -117,15 +111,17 @@ Championnat & Classement
     <h2>🏆 Championnat & Classement</h2>
 
     <p>
-        Retrouvez le calendrier, le classement et les résultats
-        officiels du championnat.
+        Retrouvez le calendrier, les résultats et le classement officiel
+        de notre équipe en Départementale 2 Vendée.
     </p>
 
-    <a class="bouton"
-   href="http://compet.afebas.org/equipe#pane-calendrier-resultats"
-   target="_blank">
-    🏆 Championnat & Classement
-    </a>
+    <p>
+        <a class="bouton"
+           href="http://compet.afebas.org/equipe#pane-calendrier-resultats"
+           target="_blank">
+            Consulter le championnat
+        </a>
+    </p>
 
 </section>
 
@@ -135,14 +131,13 @@ Championnat & Classement
 
     <article class="actu">
 
-        <h3>Bienvenue sur le site officiel</h3>
+        <h3>Bienvenue sur notre site officiel</h3>
 
-<p>
-Suivez les résultats de nos rencontres, les prochaines compétitions,
-les événements de l'association et toutes les informations importantes
-des Rest'en Poche Billard.
-  </p>
-        
+        <p>
+            Retrouvez toute l'actualité du club,
+            les résultats, les rencontres et les événements.
+        </p>
+
     </article>
 
 </section>
@@ -152,30 +147,33 @@ des Rest'en Poche Billard.
     <h2>📅 Agenda</h2>
 
     <ul class="agenda">
-
         <li>Entraînements</li>
-
         <li>Matchs officiels</li>
-
         <li>Assemblée Générale</li>
-
     </ul>
 
 </section>
 
-<section id="galerie" class="section">
+    <section id="galerie" class="section">
 
     <h2>📷 Galerie</h2>
 
     <div class="galerie">
 
-        <div class="photo">L'équipe</div>
+        <div class="photo">
+            <h3>👥 L'équipe</h3>
+            <p>Découvrez les joueurs des Rest'en Poche Billard.</p>
+        </div>
 
-        <div class="photo">Autres</div>
+        <div class="photo">
+            <h3>📸 Autres</h3>
+            <p>Moments de convivialité, compétitions et vie du club.</p>
+        </div>
 
     </div>
 
 </section>
+
 <section id="contact" class="section">
 
     <h2>📞 Contact</h2>
@@ -188,7 +186,7 @@ des Rest'en Poche Billard.
     </p>
 
     <p>
-        📞 Florent : <a href="tel:+33666980800">06 66 98 08 00</a>
+        📞 <a href="tel:+33666980800">06 66 98 08 00</a>
     </p>
 
     <p>
@@ -217,8 +215,13 @@ des Rest'en Poche Billard.
     <h2>🤝 Partenaires</h2>
 
     <p>
-        Cette rubrique accueillera prochainement les entreprises
-        partenaires de notre association.
+        Les Rest'en Poche Billard remercie l'ensemble de ses partenaires
+        pour leur soutien.
+    </p>
+
+    <p>
+        Vous souhaitez devenir partenaire ?
+        Contactez-nous.
     </p>
 
 </section>
@@ -226,7 +229,7 @@ des Rest'en Poche Billard.
 <footer>
 
     <p>
-        © 2026 Les Rest'en Poche Billard – Bellevigny
+        © 2026 Les Rest'en Poche Billard - Bellevigny
     </p>
 
 </footer>
