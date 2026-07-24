@@ -33,3 +33,12 @@ sections.forEach(section => {
     section.style.transition = "all 0.8s ease";
     observer.observe(section);
 });
+
+// Menu mobile
+
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
