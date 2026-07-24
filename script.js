@@ -1,39 +1,3 @@
-// Défilement fluide des liens du menu
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const cible = document.querySelector(this.getAttribute("href"));
-
-        if (cible) {
-            cible.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    });
-});
-
-// Apparition progressive des sections
-const sections = document.querySelectorAll(".section");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-}, {
-    threshold: 0.15
-});
-
-sections.forEach(section => {
-    section.style.opacity = "0";
-    section.style.transform = "translateY(40px)";
-    section.style.transition = "all 0.8s ease";
-    observer.observe(section);
-});
-
 // Menu mobile
 
 const menuToggle = document.querySelector(".menu-toggle");
@@ -41,4 +5,19 @@ const nav = document.querySelector("nav");
 
 menuToggle.addEventListener("click", () => {
     nav.classList.toggle("active");
+
+    // Change l'icône ☰ en ✖
+    if (nav.classList.contains("active")) {
+        menuToggle.innerHTML = "✖";
+    } else {
+        menuToggle.innerHTML = "☰";
+    }
+});
+
+// Ferme le menu lorsqu'on clique sur un lien
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+    });
 });
