@@ -269,6 +269,321 @@ text-align:center;
 padding:25px;
 margin-top:60px;
 }
+/* ==========================
+MENU MOBILE
+========================== */
+
+.menu-toggle{
+display:none;
+position:fixed;
+top:20px;
+right:20px;
+width:48px;
+height:48px;
+border:none;
+border-radius:10px;
+background:#d4af37;
+color:#111;
+font-size:30px;
+font-weight:bold;
+cursor:pointer;
+z-index:2001;
+}
+
+@media(max-width:768px){
+
+header{
+padding:15px 20px;
+justify-content:space-between;
+}
+
+.logo img{
+height:60px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+#menu{
+position:fixed;
+top:0;
+right:-280px;
+width:260px;
+height:100%;
+background:#111;
+padding-top:100px;
+transition:right .35s ease;
+z-index:2000;
+box-shadow:-5px 0 15px rgba(0,0,0,.5);
+}
+
+#menu.active{
+right:0;
+}
+
+#menu ul{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:25px;
+}
+
+#menu a{
+font-size:20px;
+}
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.section{
+padding:60px 15px;
+}
+
+.contact-boutons{
+flex-direction:column;
+}
+}
+backdrop-filter:blur(8px);
+z-index:1000;
+}
+
+.logo img{
+height:80px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+/* ==========================
+PAGE D'ACCUEIL
+========================== */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.70)),
+url("images/fond.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-size:3.4rem;
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+margin-bottom:35px;
+}
+/* ==========================
+BOUTONS
+========================== */
+
+.bouton{
+display:inline-block;
+margin:10px;
+padding:14px 28px;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:0.3s;
+}
+
+.bouton:hover{
+background:#ffffff;
+transform:translateY(-2px);
+}
+
+.bouton-secondaire{
+background:transparent;
+color:#ffffff;
+border:2px solid #d4af37;
+}
+
+.bouton-secondaire:hover{
+background:#d4af37;
+color:#111;
+}
+
+/* ==========================
+SECTIONS
+========================== */
+
+.section{
+max-width:1100px;
+margin:0 auto;
+padding:80px 20px;
+}
+
+.section h2{
+text-align:center;
+color:#d4af37;
+font-size:2.2rem;
+margin-bottom:35px;
+}
+
+/* ==========================
+DERNIER MATCH
+========================== */
+
+.match-card{
+background:#1b1b1b;
+border-left:5px solid #d4af37;
+border-radius:12px;
+padding:25px;
+max-width:700px;
+margin:0 auto;
+box-shadow:0 5px 20px rgba(0,0,0,.35);
+}
+
+.match-card h3{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.score{
+font-size:1.5rem;
+font-weight:700;
+text-align:center;
+margin:20px 0;
+}
+
+.match-card hr{
+border:none;
+border-top:1px solid #444;
+margin:25px 0;
+}
+
+/* ==========================
+ACTUALITÉS
+========================== */
+
+.actu{
+background:#1b1b1b;
+border-radius:12px;
+padding:25px;
+margin:20px auto;
+box-shadow:0 5px 20px rgba(0,0,0,.35);
+}
+
+.actu h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+/* ==========================
+AGENDA
+========================== */
+
+.agenda{
+list-style:none;
+max-width:500px;
+margin:auto;
+}
+
+.agenda li{
+background:#1b1b1b;
+margin:12px 0;
+padding:15px;
+border-left:5px solid #d4af37;
+border-radius:8px;
+}
+/* ==========================
+GALERIE
+========================== */
+
+.galerie{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.photo{
+background:#1b1b1b;
+border:2px solid #d4af37;
+border-radius:12px;
+padding:80px 20px;
+text-align:center;
+font-weight:600;
+transition:0.3s;
+cursor:pointer;
+}
+
+.photo:hover{
+transform:scale(1.03);
+border-color:#ffffff;
+}
+
+/* ==========================
+CONTACT
+========================== */
+
+#contact a{
+color:#d4af37;
+text-decoration:none;
+}
+
+.contact-boutons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* ==========================
+PARTENAIRES
+========================== */
+
+#partenaires{
+text-align:center;
+}
+
+/* ==========================
+PIED DE PAGE
+========================== */
+
+footer{
+background:#000;
+color:#aaa;
+text-align:center;
+padding:25px;
+margin-top:60px;
+}
 
 /* ==========================
 VERSION MOBILE
